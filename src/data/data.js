@@ -1,13 +1,13 @@
 // CUSTOMIZE THIS FILE TO ADD YOUR OWN DATA
 
 const data = {
-    name: "John Doe",
+    name: "Gianluca Cross-Bussoli",
     bio: "Undergraduate Architectural Student at University of Calgary passionate about building tools to make homes more affordable.",
     contact: {
-        email: "john.doe@gmail.com",
+        email: "gianluca.crossbussol@ucalgary.ca",
         phone: "+12345678910",
-        linkedin: "https://www.linkedin.com/",
-        github: "https://www.github.com/",
+        linkedin: "https://www.linkedin.com/in/gianluca-cross-bussoli-12307626b/",
+        github: "https://www.github.com/compithegreat",
     }
 }
 
