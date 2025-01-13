@@ -2,7 +2,7 @@
 
 const data = {
     name: "Gianluca Cross-Bussoli",
-    bio: "Undergraduate Architectural Student at University of Calgary passionate about building tools to make homes more affordable.",
+    bio: "",
     contact: {
         email: "gianluca.crossbussol@ucalgary.ca",
         phone: "+12345678910",
