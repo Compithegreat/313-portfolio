@@ -110,10 +110,10 @@ document.querySelector("#app").innerHTML = `
 
     <ul id="footer-items">
       
-      <div>scoob</div>
-      <div>scoob</div>
-      <div>scoob</div>
-      <div>scoob</div>
+      <div><i class="fas fa-envelope"></i> ${data.contact.email}</div>
+      <div><i class="fas fa-phone"></i> ${data.contact.phone}</div>
+      <div><a href="${data.contact.linkedin}"><i class="fa-brands fa-linkedin"></i> Gianluca Cross-Bussoli</a></div>
+      <div><a href="${data.contact.github}"><i class="fa-brands fa-github"></i> Compithegreat</a></div>
 
       <!--
       <li>Email: ${data.contact.email}</li>
