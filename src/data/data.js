@@ -2,7 +2,7 @@
 
 const data = {
     name: "Gianluca Cross-Bussoli",
-    bio: "",
+    bio: "DSGN 313",
     contact: {
         email: "gianluca.crossbussol@ucalgary.ca",
         phone: "+12345678910",

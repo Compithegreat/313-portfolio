@@ -41,7 +41,11 @@ document.querySelector("#app").innerHTML = `
 
     <section id="projects">
       <div id="project-row">
-      Assignment 1 - Cadavre Exquis
+        <div>
+          <h3>Assignment 1</h3>
+          </br>
+          <h2>Cadavre Exquis</h2>
+        </div>
         <div class="three-model">
           <div id="model1">
             <img src="${cadavreMain}" alt="Cadavre Exquis." />
@@ -59,9 +63,13 @@ document.querySelector("#app").innerHTML = `
         </div>
       </div> 
       
-      <!--
+      
       <div id="project-row">
-      Model 2
+        <div>
+          <h3>Assignment 2</h3>
+          </br>
+          <h2>Interoperability</h2>
+        </div>
         <div class="three-model">
           <div id="model2"></div>
         </div>
@@ -77,9 +85,13 @@ document.querySelector("#app").innerHTML = `
           <h4 id="description">A 3D tree model is a geometric representation of a tree, featuring a trunk, branches, and foliage. The trunk is typically cylindrical, with textured bark, while the branches extend outward to support leaves or a canopy. It may include roots or flowers for added detail.</h4>
         </div>
       </div>
-
+      <!--
       <div id="project-row">
-      Model 3
+        <div>
+          <h3>Assignment 2</h3>
+          </br>
+          <h2>Interoperability</h2>
+        </div>
         <div class="three-model">
           <div id="model3"></div>
         </div>
@@ -97,14 +109,18 @@ document.querySelector("#app").innerHTML = `
     </section>
 
     <ul id="footer-items">
+      
+      <div>scoob</div>
+      <div>scoob</div>
+      <div>scoob</div>
+      <div>scoob</div>
+
+      <!--
       <li>Email: ${data.contact.email}</li>
       <li>Phone: ${data.contact.phone}</li>
-      <li>LinkedIn: <a href="${data.contact.linkedin}">${
-  data.contact.linkedin
-}</a></li>
-      <li>GitHub: <a href="${data.contact.github}">${
-  data.contact.github
-}</a></li>
+      <li>LinkedIn: <a href="${data.contact.linkedin}">${data.contact.linkedin}</a></li>
+      <li>GitHub: <a href="${data.contact.github}">${data.contact.github}</a></li>
+      -->
     </ul>
   </main>
 `;
