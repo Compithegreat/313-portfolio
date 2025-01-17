@@ -23,7 +23,7 @@ const cadavrePhotos =[
   "./cadavrePhotos/cadavre3.jpg",
   "./cadavrePhotos/cadavre4.jpg",
 ]
-const cadavreMain = "./cadavrePhotos/cadavreMain.jpg"
+const cadavreMain = "./cadavrePhotos/cadavreMain.png"
 
 const cadavreCaptions =[
   "test1",
@@ -32,8 +32,53 @@ const cadavreCaptions =[
   "testFour",
 ]
 
+
+
+//Modal image code courtesy of ChatGPT
+
+// Ensure script runs after DOM has fully loaded
+window.onload = function () {
+  // Create modal elements dynamically
+  const modal = document.createElement("div");
+  modal.id = "imageModal";
+  modal.classList.add("modal");
+  modal.innerHTML = `
+    <span class="close">&times;</span>
+    <img id="modalImg">
+  `;
+  document.body.appendChild(modal);
+
+  const modalImg = document.getElementById("modalImg");
+  const closeBtn = modal.querySelector(".close");
+
+  // Function to open modal with clicked image
+  function openModal(event) {
+    modalImg.src = event.target.src;
+    modal.style.display = "flex";
+  }
+
+  // Function to close modal
+  function closeModal() {
+    modal.style.display = "none";
+  }
+
+  // Attach event listeners to all images with class "modalable"
+  document.querySelectorAll(".modalable").forEach(img => {
+    img.addEventListener("click", openModal);
+  });
+
+  closeBtn.addEventListener("click", closeModal);
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) closeModal();
+  });
+};
+
+
+//Main code
+
 document.querySelector("#app").innerHTML = `
-  <main id="container">
+
+<main id="container">
     <section id="heading">
       <h1>${data.name}</h1>
       <p>${data.bio}</p>
@@ -48,16 +93,17 @@ document.querySelector("#app").innerHTML = `
         </div>
         <div class="three-model">
           <div id="model1">
-            <img src="${cadavreMain}" alt="Cadavre Exquis." />
+            <img src="${cadavreMain}" alt="Cadavre Exquis." id="largeImg" class="modalable">
           </div>
         </div>
         <div id="images-description">
           <div id="images">
             ${cadavrePhotos
               .map(
-                (cadavre, index) => `<img src="${cadavre}" alt="${cadavreCaptions[index]}" />`
+                (cadavre, index) => `<img src="${cadavre}" alt="${cadavreCaptions[index]}" class="modalable" id="gallery" />`
               )
               .join("")}
+            
           </div>
           <h4 id="description">Lorem Ipsum.</h4>
         </div>
@@ -78,7 +124,7 @@ document.querySelector("#app").innerHTML = `
             ${trees
               .map(
                 (trees, index) =>
-                  `<img src="${trees}" alt="tree${index + 1}" />`
+                  `<img src="${trees}" alt="tree${index + 1}" class="modalable" id="gallery"/>`
               )
               .join("")}
           </div>
@@ -129,3 +175,8 @@ document.querySelector("#app").innerHTML = `
 // createThreeScene("#model1", "/3DModels/project1/cube.obj");
 createThreeScene("#model2", "/3DModels/project2/tree.obj");
 createThreeScene("#model3", "/3DModels/project3/cottage.obj");
+
+
+
+
+

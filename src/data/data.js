@@ -5,7 +5,7 @@ const data = {
     bio: "DSGN 313",
     contact: {
         email: "gianluca.crossbussol@ucalgary.ca",
-        phone: "+12345678910",
+        phone: "+1 (587) 225-9205",
         linkedin: "https://www.linkedin.com/in/gianluca-cross-bussoli-12307626b/",
         github: "https://www.github.com/compithegreat",
     }
