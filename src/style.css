@@ -100,8 +100,8 @@ h1 {
   width: 300px;
   margin-right: 3em;
   margin-left: 6em;
-  border: 1px solid #ccc;
-  background-color: white;
+  /*border: 1px solid #ccc;*/
+  /*background-color: #333;*/
 }
 
 #gallery {
@@ -110,6 +110,7 @@ h1 {
   width: 120px;
   object-fit: contain;
   margin: 0.5em;
+  background-color: #333;
 }
 
 #images {
@@ -163,6 +164,7 @@ h1 {
   object-fit: contain;
   justify-content: center;
   align-items: center;
+  background-color: #333;
 }
 
 /* Modal styling courtesy of ChatGPT */
