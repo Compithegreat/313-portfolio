@@ -18,10 +18,10 @@ const trees = [
 
 //TO BE UPDATED
 const cadavrePhotos =[
-  "./cadavrePhotos/cadavre1.jpg",
-  "./cadavrePhotos/cadavre2.jpg",
-  "./cadavrePhotos/cadavre3.jpg",
-  "./cadavrePhotos/cadavre4.jpg",
+  "./cadavrePhotos/cadavre1.png",
+  "./cadavrePhotos/cadavre2.png",
+  "./cadavrePhotos/cadavre3.png",
+  "./cadavrePhotos/cadavre4.png",
 ]
 const cadavreMain = "./cadavrePhotos/cadavreMain.png"
 
@@ -40,11 +40,14 @@ const cadavreCaptions =[
 window.onload = function () {
   // Create modal elements dynamically
   const modal = document.createElement("div");
+  var modalCaption=""
   modal.id = "imageModal";
   modal.classList.add("modal");
   modal.innerHTML = `
     <span class="close">&times;</span>
     <img id="modalImg">
+    <span></span>
+    <p>${modalCaption}</p>
   `;
   document.body.appendChild(modal);
 
@@ -54,6 +57,7 @@ window.onload = function () {
   // Function to open modal with clicked image
   function openModal(event) {
     modalImg.src = event.target.src;
+    modalCaption = event.target.alt;
     modal.style.display = "flex";
   }
 
@@ -86,10 +90,11 @@ document.querySelector("#app").innerHTML = `
 
     <section id="projects">
       <div id="project-row">
-        <div>
+        <div id="titler">
           <h3>Assignment 1</h3>
+          <h3>Cadavre Exquis</h3>
           </br>
-          <h2>Cadavre Exquis</h2>
+          <h2>In Transit</h2>
         </div>
         <div class="three-model">
           <div id="model1">
@@ -105,13 +110,13 @@ document.querySelector("#app").innerHTML = `
               .join("")}
             
           </div>
-          <h4 id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
+          <h4 id="description">Lorem ipsum </h4>
         </div>
       </div> 
       
       
       <div id="project-row">
-        <div>
+        <div id="titler">
           <h3>Assignment 2</h3>
           </br>
           <h2>Interoperability</h2>
@@ -133,7 +138,7 @@ document.querySelector("#app").innerHTML = `
       </div>
       <!--
       <div id="project-row">
-        <div>
+        <div id="titler">
           <h3>Assignment 2</h3>
           </br>
           <h2>Interoperability</h2>

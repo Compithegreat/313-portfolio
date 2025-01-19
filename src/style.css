@@ -104,6 +104,11 @@ h1 {
   /*background-color: #333;*/
 }
 
+#titler {
+  height: 300px;
+  width: 200px;
+}
+
 #gallery {
   /* Image dimensions and margin */
   height: 120px;
@@ -133,12 +138,12 @@ h1 {
 #description {
   /* Center description content */
   display: flex;
-  align-items: center;
+  align-items: top;
   height: 4em;
   width: 35em;
   font-weight: 150;
   margin-left: 2em;
-  margin-top: 3em;
+  margin-top: 1.5em;
 }
 
 @media screen and (max-width: 768px) {
