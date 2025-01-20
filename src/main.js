@@ -193,7 +193,7 @@ When I wake up, when I disembark this train, I will be met with a world unfamili
           <h4 id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </h4>
         </div>
       </div>
-      
+
       -->
 
       <!--
@@ -222,16 +222,9 @@ When I wake up, when I disembark this train, I will be met with a world unfamili
     <ul id="footer-items">
       
       <div><i class="fas fa-envelope"></i> ${data.contact.email}</div>
-      <div><i class="fas fa-phone"></i> ${data.contact.phone}</div>
+      <!--<div><i class="fas fa-phone"></i> ${data.contact.phone}</div>-->
       <div><a href="${data.contact.linkedin}"><i class="fa-brands fa-linkedin"></i> Gianluca Cross-Bussoli</a></div>
       <div><a href="${data.contact.github}"><i class="fa-brands fa-github"></i> Compithegreat</a></div>
-
-      <!--
-      <li>Email: ${data.contact.email}</li>
-      <li>Phone: ${data.contact.phone}</li>
-      <li>LinkedIn: <a href="${data.contact.linkedin}">${data.contact.linkedin}</a></li>
-      <li>GitHub: <a href="${data.contact.github}">${data.contact.github}</a></li>
-      -->
     </ul>
   </main>
 `;
