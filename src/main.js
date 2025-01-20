@@ -26,7 +26,7 @@ const cadavrePhotos =[
 const cadavreMain = "./cadavrePhotos/cadavreMain.png"
 
 const cadavreCaptions =[
-  "test1",
+  "Here I am. </br>Unlike other pieces of the scene, I am not distorted. </br>Though, I am but a sketch. Unfinished, but getting there. </br>From my point of view, my own existence is undeniable - its shape, however, is hazy.",
   "testB",
   "test-iii",
   "testFour",
@@ -46,7 +46,9 @@ window.onload = function () {
   modal.innerHTML = `
     <span class="close">&times;</span>
     <img id="modalImg">
-    <span></span>
+    <span id="imgCaption" >
+      <h4>${modalCaption}e</h4>
+    </span>
     <p>${modalCaption}</p>
   `;
   document.body.appendChild(modal);
@@ -83,9 +85,9 @@ window.onload = function () {
 document.querySelector("#app").innerHTML = `
 
 <main id="container">
-    <section id="heading">
+    <section id="heading" style="text-align:center;">
       <h1>${data.name}</h1>
-      <p>${data.bio}</p>
+      <span><p>${data.bio}</p> <p>DSGN 313 | Digital Modelling</p></span>
     </section>
 
     <section id="projects">
@@ -110,7 +112,9 @@ document.querySelector("#app").innerHTML = `
               .join("")}
             
           </div>
-          <h4 id="description">Lorem ipsum </h4>
+          <h4 id="description">After the advent of a severe dissociative episode, I’ve forgotten myself.
+As I walk around, as I live my life, I explore the branching paths of my psyche and piece together a new identity. As my conscious being focuses on this reconstruction, my unconscious takes the reigns - They tackle projects, interact with friends, connect with strangers, professionals, and activists, and fight for better, more human-friendly communities.
+When I wake up, when I disembark this train, I will be met with a world unfamiliar, though comfortable to myself.</h4>
         </div>
       </div> 
       

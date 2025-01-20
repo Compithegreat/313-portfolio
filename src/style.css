@@ -90,7 +90,8 @@ h1 {
   /* Styling for project models */
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: top;
+  margin-top: 0.5em;
 }
 
 #model1,
@@ -139,11 +140,16 @@ h1 {
   /* Center description content */
   display: flex;
   align-items: top;
-  height: 4em;
+  height: auto;
+  min-height: 4em;
   width: 35em;
   font-weight: 150;
   margin-left: 2em;
   margin-top: 1.5em;
+}
+
+h4 {
+  font-weight: 150;
 }
 
 @media screen and (max-width: 768px) {
@@ -203,5 +209,9 @@ h1 {
 
 .modalable:hover {
   opacity: 0.3;
+}
+
+#imgCaption {
+  margin-left: 1em;
 }
 
