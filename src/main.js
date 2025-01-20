@@ -137,7 +137,7 @@ window.onload = function () {
 document.querySelector("#app").innerHTML = `
 
 <main id="container">
-    <section id="heading" style="text-align:center;">
+    <section id="heading">
       <h1>${data.name}</h1>
       <span><p>${data.bio}</p> <p>DSGN 313 | Digital Modelling</p></span>
     </section>
