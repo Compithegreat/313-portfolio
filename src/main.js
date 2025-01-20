@@ -27,11 +27,25 @@ const cadavreMain = "./cadavrePhotos/cadavreMain.png"
 
 const cadavreCaptions =[
   "Here I am. </br>Unlike other pieces of the scene, I am not distorted. </br>Though, I am but a sketch. Unfinished, but getting there. </br>From my point of view, my own existence is undeniable - its shape, however, is hazy.",
-  "testB",
-  "test-iii",
-  "testFour",
+  "The errors- the dissocation. </br>A distorted haze of something, obfuscating my gaze and outlook on reality and identity.",
+  "The outside world - </br>or maybe, a world which I’m working towards? </br>As hazy as it is, even to my conscious mind, themes of urbanism and people-oriented planning are clear. </br>It’s an obsession that sticks in my mind.",
+  "The branches. </br>In my pursuit of finding myself, I experiment with following different paths. </br>Each path reveals different aspects of myself which previously I had forgotten. </br>Each path reveals its own branching spurs - each with spurs of their own.",
 ]
 
+const cadavreSources =[
+  ["https://unsplash.com/photos/a-close-up-of-a-piece-of-white-paper-nW3XR5c1aCg"],
+  [],
+  [
+    "https://www.makemyhouse.com/architectural-design/54x50-2700sqft-home-design/14680/354",
+    "http://oliverarchitect.com/blog/2019/12/16/on-the-boards-little-italy-storefront",
+    "https://freepngimg.com/png/16756-tree-png-clipart",
+    "https://www.calgary.ca/green-line/trains.html",
+    "https://www.gettyimages.ca/detail/video/flying-through-stars-and-nebula-stock-video-stock-footage/1514138928",
+    "https://www.textures.com/download/floors-regular-0204/21948",
+    "https://www.textures.com/download/high-rise-residential-0084/31620",
+    ],
+  [],
+]
 
 
 //Modal image code courtesy of ChatGPT
@@ -46,22 +60,57 @@ window.onload = function () {
   modal.innerHTML = `
     <span class="close">&times;</span>
     <img id="modalImg">
-    <span id="imgCaption" >
-      <h4>${modalCaption}e</h4>
+    <span id="modalSidebar">
+      <h4 id="imgCaption">${modalCaption}</h4>
+      </br>
+      <h3 id="srcHeader"> Sources </h3>
+      <div class="grid" id="buttonGrid">
+      </div>
     </span>
-    <p>${modalCaption}</p>
   `;
   document.body.appendChild(modal);
 
   const modalImg = document.getElementById("modalImg");
   const closeBtn = modal.querySelector(".close");
+  const grid = modal.querySelector(".grid");
+  const srcHeader = document.getElementById("srcHeader");
+
+  function genSources(event) {
+    grid.innerHTML=""
+    
+    var srcArray = String(event.target.getAttribute("data-sources")).split(",")
+    
+    if (srcArray[0] != "") {
+      srcHeader.textContent="Sources"
+    }
+    else {
+      srcHeader.textContent=""
+    }
+
+
+    srcArray.forEach(item => {
+      const anchor = document.createElement("a");
+      anchor.href = item;
+      anchor.textContent = item;
+      anchor.target = "_blank"; // Open in new tab
+
+      // Append to grid
+      grid.appendChild(anchor);
+    });
+
+    
+
+  }
 
   // Function to open modal with clicked image
   function openModal(event) {
     modalImg.src = event.target.src;
-    modalCaption = event.target.alt;
+    document.getElementById("imgCaption").innerHTML = event.target.alt;
     modal.style.display = "flex";
+    genSources(event);
+    
   }
+
 
   // Function to close modal
   function closeModal() {
@@ -77,6 +126,9 @@ window.onload = function () {
   modal.addEventListener("click", (event) => {
     if (event.target === modal) closeModal();
   });
+
+  
+  
 };
 
 
@@ -100,14 +152,14 @@ document.querySelector("#app").innerHTML = `
         </div>
         <div class="three-model">
           <div id="model1">
-            <img src="${cadavreMain}" alt="Cadavre Exquis." id="largeImg" class="modalable">
+            <img src="${cadavreMain}" alt="Cadavre Exquis." id="largeImg" class="modalable" data-sources="">
           </div>
         </div>
         <div id="images-description">
           <div id="images">
             ${cadavrePhotos
               .map(
-                (cadavre, index) => `<img src="${cadavre}" alt="${cadavreCaptions[index]}" class="modalable" id="gallery" />`
+                (cadavre, index) => `<img src="${cadavre}" alt="${cadavreCaptions[index]}" class="modalable" id="gallery" data-sources="${cadavreSources[index]}" />`
               )
               .join("")}
             

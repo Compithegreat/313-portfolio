@@ -205,13 +205,25 @@ h4 {
   cursor: pointer;
 }
 
-
-
 .modalable:hover {
   opacity: 0.3;
 }
 
-#imgCaption {
+#modalSidebar {
   margin-left: 1em;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Adjust columns as needed */
+  gap: 10px;
+  padding: 20px;
+}
+
+.grid a {
+  font-size: 0.75em;
+  font-weight: 150;
 }
 
