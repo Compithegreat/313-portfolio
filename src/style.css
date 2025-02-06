@@ -76,15 +76,16 @@ h1 {
   /* Center project section */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: left;
+  justify-content: left;
   margin-bottom: 10em;
+  padding-left: 7.5em;
 }
 
 #project-row {
   /* Row layout for projects */
   display: flex;
-  justify-content: center;
+  justify-content: left;
   padding-top: 5em;
 }
 
@@ -94,15 +95,18 @@ h1 {
   justify-content: center;
   align-items: top;
   margin-top: 0.5em;
+  margin-right: 2.5em;
+  margin-left: 5.5em;
 }
 
 #model1,
-#model2,
-#model3 {
+#A2-model1,
+#A2-model2,
+#A2-model3 {
   height: 300px;
   width: 300px;
-  margin-right: 3em;
-  margin-left: 6em;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
   /*border: 1px solid #ccc;*/
   /*background-color: #333;*/
 }

@@ -169,8 +169,6 @@ As I walk around, as I live my life, I explore the branching paths of my psyche 
 When I wake up, when I disembark this train, I will be met with a world unfamiliar, though comfortable to myself.</h4>
         </div>
       </div> 
-      
-      <!--
 
       <div id="project-row">
         <div id="titler">
@@ -179,7 +177,9 @@ When I wake up, when I disembark this train, I will be met with a world unfamili
           <h2>Interoperability</h2>
         </div>
         <div class="three-model">
-          <div id="model2"></div>
+          <div id="A2-model1"></div>
+          <div id="A2-model2"></div>
+          <div id="A2-model3"></div>
         </div>
         <div id="images-description">
           <div id="images">
@@ -194,7 +194,6 @@ When I wake up, when I disembark this train, I will be met with a world unfamili
         </div>
       </div>
 
-      -->
 
       <!--
       <div id="project-row">
@@ -231,8 +230,9 @@ When I wake up, when I disembark this train, I will be met with a world unfamili
 
 // Create three.js scenes for each
 // createThreeScene("#model1", "/3DModels/project1/cube.obj");
-createThreeScene("#model2", "/3DModels/project2/top-shell.obj");
-createThreeScene("#model3", "/3DModels/project3/cottage.obj");
+createThreeScene("#A2-model1", "/3DModels/A2/pavilion.obj");
+createThreeScene("#A2-model2", "/3DModels/A2/torus.obj");
+createThreeScene("#A2-model3", "/3DModels/A2/niko.obj");
 
 
 
