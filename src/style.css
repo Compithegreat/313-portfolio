@@ -25,6 +25,8 @@
   /* Main container padding */
   flex-grow: 1;
   padding: 20px;
+  padding-left: 0px;
+  align-items: center;
 }
 
 #footer-items {
@@ -79,7 +81,7 @@ h1 {
   align-items: left;
   justify-content: left;
   margin-bottom: 10em;
-  padding-left: 7.5em;
+  margin-left: 20px;
 }
 
 #project-row {
@@ -95,8 +97,12 @@ h1 {
   justify-content: center;
   align-items: top;
   margin-top: 0.5em;
-  margin-right: 2.5em;
-  margin-left: 5.5em;
+  margin-right: 3em;
+  margin-left: 6em;
+
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Adjust columns as needed */
+  gap: 1em;
 }
 
 #model1,
@@ -105,15 +111,15 @@ h1 {
 #A2-model3 {
   height: 300px;
   width: 300px;
-  margin-right: 0.5em;
-  margin-left: 0.5em;
   /*border: 1px solid #ccc;*/
   /*background-color: #333;*/
 }
 
-#titler {
+#project-title {
   height: 300px;
   width: 200px;
+  min-width: 200px;
+  justify-content: left;
 }
 
 #gallery {

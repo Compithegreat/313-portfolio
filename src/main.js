@@ -144,7 +144,7 @@ document.querySelector("#app").innerHTML = `
 
     <section id="projects">
       <div id="project-row">
-        <div id="titler">
+        <div id="project-title">
           <h3>Assignment 1</h3>
           <h3>Cadavre Exquis</h3>
           </br>
@@ -171,7 +171,7 @@ When I wake up, when I disembark this train, I will be met with a world unfamili
       </div> 
 
       <div id="project-row">
-        <div id="titler">
+        <div id="project-title">
           <h3>Assignment 2</h3>
           </br>
           <h2>Interoperability</h2>
@@ -197,7 +197,7 @@ When I wake up, when I disembark this train, I will be met with a world unfamili
 
       <!--
       <div id="project-row">
-        <div id="titler">
+        <div id="project-title">
           <h3>Assignment 2</h3>
           </br>
           <h2>Interoperability</h2>
