@@ -220,7 +220,7 @@ When I wake up, when I disembark this train, I will be met with a world unfamili
 
     <ul id="footer-items">
       
-      <div><i class="fas fa-envelope"></i> ${data.contact.email}</div>
+      <div><a href="mailto:${data.contact.email}"><i class="fas fa-envelope"></i> ${data.contact.email}</a></div>
       <!--<div><i class="fas fa-phone"></i> ${data.contact.phone}</div>-->
       <div><a href="${data.contact.linkedin}"><i class="fa-brands fa-linkedin"></i> Gianluca Cross-Bussoli</a></div>
       <div><a href="${data.contact.github}"><i class="fa-brands fa-github"></i> Compithegreat</a></div>
