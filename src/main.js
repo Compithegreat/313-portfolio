@@ -1,56 +1,11 @@
 import "./style.css";
 import data from "./data/data";
+import imageRefData from "./data/image-refs";
 import { createThreeScene } from "./threeScene";
 
-const cubes = [
-  "./cubeDrawings/cube1.webp",
-  "./cubeDrawings/cube2.webp",
-  "./cubeDrawings/cube3.webp",
-  "./cubeDrawings/cube4.webp",
-];
-
-const trees = [
-  "./treeDrawings/tree1.jpg",
-  "./treeDrawings/tree2.jpg",
-  "./treeDrawings/tree3.jpg",
-  "./treeDrawings/tree4.jpg",
-];
-
-//TO BE UPDATED
-const cadavrePhotos = [
-  "./cadavrePhotos/cadavre1.png",
-  "./cadavrePhotos/cadavre2.png",
-  "./cadavrePhotos/cadavre3.png",
-  "./cadavrePhotos/cadavre4.png",
-];
-const cadavreMain = "./cadavrePhotos/cadavreMain.png";
-
-const cadavreCaptions = [
-  "Here I am. </br>Unlike other pieces of the scene, I am not distorted. </br>Though, I am but a sketch. Unfinished, but getting there. </br>From my point of view, my own existence is undeniable - its shape, however, is hazy.",
-  "The errors- the dissocation. </br>A distorted haze of something, obfuscating my gaze and outlook on reality and identity.",
-  "The outside world - </br>or maybe, a world which I’m working towards? </br>As hazy as it is, even to my conscious mind, themes of urbanism and people-oriented planning are clear. </br>It’s an obsession that sticks in my mind.",
-  "The branches. </br>In my pursuit of finding myself, I experiment with following different paths. </br>Each path reveals different aspects of myself which previously I had forgotten. </br>Each path reveals its own branching spurs - each with spurs of their own.",
-];
-
-const cadavreSources = [
-  [
-    "https://unsplash.com/photos/a-close-up-of-a-piece-of-white-paper-nW3XR5c1aCg",
-  ],
-  [],
-  [
-    "https://www.makemyhouse.com/architectural-design/54x50-2700sqft-home-design/14680/354",
-    "http://oliverarchitect.com/blog/2019/12/16/on-the-boards-little-italy-storefront",
-    "https://freepngimg.com/png/16756-tree-png-clipart",
-    "https://www.calgary.ca/green-line/trains.html",
-    "https://www.gettyimages.ca/detail/video/flying-through-stars-and-nebula-stock-video-stock-footage/1514138928",
-    "https://www.textures.com/download/floors-regular-0204/21948",
-    "https://www.textures.com/download/high-rise-residential-0084/31620",
-  ],
-  [],
-];
 
 
-//Modal image code courtesy of ChatGPT
+//Modal image code courtesy of ChatGPT, modified and troubleshooted by myself
 
 // Ensure script runs after DOM has fully loaded
 window.onload = function () {
@@ -124,6 +79,7 @@ window.onload = function () {
 };
 
 
+
 //Main code
 
 document.querySelector("#app").innerHTML = `
@@ -144,14 +100,14 @@ document.querySelector("#app").innerHTML = `
         </div>
         <div class="three-model">
           <div id="A1-model1">
-            <img src="${cadavreMain}" alt="Cadavre Exquis." id="largeImg" class="modalable" data-sources="">
+            <img src="${imageRefData.cadavre.main}" alt="Cadavre Exquis." id="largeImg" class="modalable" data-sources="">
           </div>
         </div>
         <div id="images-description">
           <div id="images">
-            ${cadavrePhotos
+            ${imageRefData.cadavre.photos
               .map(
-                (cadavre, index) => `<img src="${cadavre}" alt="${cadavreCaptions[index]}" class="modalable" id="gallery-img" data-sources="${cadavreSources[index]}" />`
+                (photo, index) => `<img src="${photo}" alt="${imageRefData.cadavre.captions[index]}" class="modalable" id="gallery-img" data-sources="${imageRefData.cadavre.sources[index]}" />`
               )
               .join("")}
             
@@ -180,11 +136,11 @@ When I wake up, when I disembark this train, I will be met with a world unfamili
         </div>
         <div id="images-description">
           <div id="images">
-            <img src="./interopPhotos/interopChart.png"id="four_two" class="modalable" data-sources=""/>
-            ${trees
+            <img src="${imageRefData.interop.chart}"id="four-three" class="modalable" data-sources=""/>
+            ${imageRefData.trees
               .map(
-                (trees, index) =>
-                  `<img src="${trees}" alt="tree${index + 1}" class="modalable" id="gallery-img"/>`
+                (photo, index) =>
+                  `<img src="${photo}" alt="${imageRefData.interop.captions[index]}" class="modalable" id="gallery-img" data-sources="${imageRefData.interop.sources[index]}"/>`
               )
               .join("")}
           </div>
@@ -201,13 +157,13 @@ When I wake up, when I disembark this train, I will be met with a world unfamili
         </div>
         <div class="three-model">
           <div id="A3-model1">
-            <img src="${cadavreMain}" alt="Cadavre Exquis." id="largeImg" class="modalable" data-sources="">
+            <img src="${imageRefData.cadavre.main}" alt="Cadavre Exquis." id="largeImg" class="modalable" data-sources="">
           </div>
         </div>
         <div id="images-description">
           <div id="images">
             <!--<img src="./interopPhotos/interopChart.png"id="four_two" class="modalable" data-sources=""/>-->
-            ${trees
+            ${imageRefData.trees
               .map(
                 (trees, index) =>
                   `<img src="${trees}" alt="tree${index + 1}" class="modalable" id="gallery-img"/>`
@@ -227,13 +183,13 @@ When I wake up, when I disembark this train, I will be met with a world unfamili
         </div>
         <div class="three-model">
           <div id="A3-model1">
-            <img src="${cadavreMain}" alt="Cadavre Exquis." id="largeImg" class="modalable" data-sources="">
+            <img src="${imageRefData.cadavre.main}" alt="Cadavre Exquis." id="largeImg" class="modalable" data-sources="">
           </div>
         </div>
         <div id="images-description">
           <div id="images">
             <!--<img src="./interopPhotos/interopChart.png"id="four_two" class="modalable" data-sources=""/>-->
-            ${trees
+            ${imageRefData.trees
               .map(
                 (trees, index) =>
                   `<img src="${trees}" alt="tree${index + 1}" class="modalable" id="gallery-img"/>`
@@ -253,13 +209,13 @@ When I wake up, when I disembark this train, I will be met with a world unfamili
         </div>
         <div class="three-model">
           <div id="A3-model1">
-            <img src="${cadavreMain}" alt="Cadavre Exquis." id="largeImg" class="modalable" data-sources="">
+            <img src="${imageRefData.cadavre.main}" alt="Cadavre Exquis." id="largeImg" class="modalable" data-sources="">
           </div>
         </div>
         <div id="images-description">
           <div id="images">
             <!--<img src="./interopPhotos/interopChart.png"id="four_two" class="modalable" data-sources=""/>-->
-            ${trees
+            ${imageRefData.trees
               .map(
                 (trees, index) =>
                   `<img src="${trees}" alt="tree${index + 1}" class="modalable" id="gallery-img"/>`
@@ -287,9 +243,9 @@ When I wake up, when I disembark this train, I will be met with a world unfamili
 
 // Create three.js scenes for each
 // createThreeScene("#model1", "/3DModels/project1/cube.obj");
-createThreeScene("#A2-model1", "/3DModels/A2/pavilion.obj");
-createThreeScene("#A2-model2", "/3DModels/A2/torus.obj");
-createThreeScene("#A2-model3", "/3DModels/A2/niko.obj");
+createThreeScene("#A2-model1", imageRefData.interop.models[0]);
+createThreeScene("#A2-model2", imageRefData.interop.models[1]);
+createThreeScene("#A2-model3", imageRefData.interop.models[2]);
 
 
 
