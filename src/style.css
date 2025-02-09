@@ -105,10 +105,11 @@ h1 {
   gap: 1em;
 }
 
-#model1,
+#A1-model1,
 #A2-model1,
 #A2-model2,
-#A2-model3 {
+#A2-model3,
+#A3-model1 {
   height: 300px;
   width: 300px;
   /*border: 1px solid #ccc;*/

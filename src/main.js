@@ -143,7 +143,7 @@ document.querySelector("#app").innerHTML = `
           <h2>In Transit</h2>
         </div>
         <div class="three-model">
-          <div id="model1">
+          <div id="A1-model1">
             <img src="${cadavreMain}" alt="Cadavre Exquis." id="largeImg" class="modalable" data-sources="">
           </div>
         </div>
@@ -162,11 +162,16 @@ When I wake up, when I disembark this train, I will be met with a world unfamili
         </div>
       </div> 
 
+
+
       <div id="project-row">
         <div id="project-title">
           <h3>Assignment 2</h3>
+          <h3>Interoperability</h3>
           </br>
-          <h2>Interoperability</h2>
+          <h2>Simple Pavilion</h2>
+          <h2>Closed Torus</h2>
+          <h2>Niko</h2>
         </div>
         <div class="three-model">
           <div id="A2-model1"></div>
@@ -176,6 +181,84 @@ When I wake up, when I disembark this train, I will be met with a world unfamili
         <div id="images-description">
           <div id="images">
             <img src="./interopPhotos/interopChart.png"id="four_two" class="modalable" data-sources=""/>
+            ${trees
+              .map(
+                (trees, index) =>
+                  `<img src="${trees}" alt="tree${index + 1}" class="modalable" id="gallery-img"/>`
+              )
+              .join("")}
+          </div>
+          <h4 id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </h4>
+        </div>
+      </div>
+
+      <div id="project-row">
+        <div id="project-title">
+          <h3>Assignment 3</h3>
+          <h3>Object Creation</h3>
+          </br>
+          <h2>name pending</h2>
+        </div>
+        <div class="three-model">
+          <div id="A3-model1">
+            <img src="${cadavreMain}" alt="Cadavre Exquis." id="largeImg" class="modalable" data-sources="">
+          </div>
+        </div>
+        <div id="images-description">
+          <div id="images">
+            <!--<img src="./interopPhotos/interopChart.png"id="four_two" class="modalable" data-sources=""/>-->
+            ${trees
+              .map(
+                (trees, index) =>
+                  `<img src="${trees}" alt="tree${index + 1}" class="modalable" id="gallery-img"/>`
+              )
+              .join("")}
+          </div>
+          <h4 id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </h4>
+        </div>
+      </div>
+
+      <div id="project-row">
+        <div id="project-title">
+          <h3>Assignment 4</h3>
+          <h3>Placemaking</h3>
+          </br>
+          <h2>name pending</h2>
+        </div>
+        <div class="three-model">
+          <div id="A3-model1">
+            <img src="${cadavreMain}" alt="Cadavre Exquis." id="largeImg" class="modalable" data-sources="">
+          </div>
+        </div>
+        <div id="images-description">
+          <div id="images">
+            <!--<img src="./interopPhotos/interopChart.png"id="four_two" class="modalable" data-sources=""/>-->
+            ${trees
+              .map(
+                (trees, index) =>
+                  `<img src="${trees}" alt="tree${index + 1}" class="modalable" id="gallery-img"/>`
+              )
+              .join("")}
+          </div>
+          <h4 id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </h4>
+        </div>
+      </div>
+
+      <div id="project-row">
+        <div id="project-title">
+          <h3>Assignment 5</h3>
+          <h3>Architectural Fluidity</h3>
+          </br>
+          <h2>name pending</h2>
+        </div>
+        <div class="three-model">
+          <div id="A3-model1">
+            <img src="${cadavreMain}" alt="Cadavre Exquis." id="largeImg" class="modalable" data-sources="">
+          </div>
+        </div>
+        <div id="images-description">
+          <div id="images">
+            <!--<img src="./interopPhotos/interopChart.png"id="four_two" class="modalable" data-sources=""/>-->
             ${trees
               .map(
                 (trees, index) =>
